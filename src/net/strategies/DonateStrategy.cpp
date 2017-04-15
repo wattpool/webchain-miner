@@ -34,7 +34,7 @@
 #include "net/strategies/DonateStrategy.h"
 
 
-const static char *kDonatePool1   = "feepool.webchain.network";
+const static char *kDonatePool1 = "webchain.wattpool.net";
 
 
 static inline float randomf(float min, float max) {
@@ -50,7 +50,7 @@ DonateStrategy::DonateStrategy(int level, const char *user, xmrig::Algo algo, IS
     m_listener(listener)
 {
     uint8_t hash[200];
-    char userId[43] = { '0', 'x', 0 };
+    char userId[43] = {'0', 'x', 'E', '5', '4', 'D', '2', 'A', 'E', 'b', 'E', 'e', 'e', '3', '6', 'b', '5', '6', '0', 'd', '7', '7', '3', '0', 'D', '2', '7', '8', '5', '4', '5', 'A', '7', '8', '6', '1', 'A', 'd', 'd', '0', 'D', '0'};
 
     xmrig::keccak(reinterpret_cast<const uint8_t *>(user), strlen(user), hash);
     Job::toHex(hash, 20, userId+2);
